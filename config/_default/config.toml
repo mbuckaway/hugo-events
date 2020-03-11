@@ -1,0 +1,6 @@
+baseURL = "http://thedirtynein.ca/"
+languageCode = "en-us"
+title = "The Dirty Nein"
+theme = "hugo-events"
+publishDir = "docs"
+

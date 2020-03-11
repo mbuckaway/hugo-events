@@ -1,0 +1,50 @@
+{{- $registeritems := .Site.Params.Register}}
+
+<section id="register">
+    <div class="container">
+        <div class="row">
+        
+            {{ with .Site.Params.RegisterInfo.title }}
+            <div class="col-lg-12">
+                <h2 class="uppercase">{{ . }}</h2>
+                <p class="lead text-center"></p>
+            </div>
+            {{ end }}
+            <div class="col-lg-12">                        
+                <!-- PRICE TABLES -->
+                <div id="price-carousel">
+                    
+                    {{ range $registeritems }}
+                    <div class="price-table standart">
+                        <div class="icon">
+                            <i class="pe-5x {{ .icon }}"></i> 
+                        </div>
+                        
+                        <div class="table-header">
+                            <h3>{{ .title }}</h3>
+                            <p class="price">{{ .price }}</p>
+                        </div>
+                        
+                        <ul class="desc list-unstyled">
+                            <li>{{ .description1 }}</li>
+                                <br>
+                                {{ with .description2 }} 
+                                {{ . }}
+                                {{ end }}
+                            </li>
+
+                            <li>{{ .price2 }}</li>
+                        </ul>
+                    </div>
+                    {{ end }}
+
+                </div>
+            </div>
+            
+            <!--<div class="col-lg-12 text-center">
+                <a class="button button-small button-line-dark" href="https://ccnbikes.com/#!/events/the-dirty-nein-2019" target="_blank">register now!</a>
+            </div>-->
+            
+        </div>
+    </div>
+</section>

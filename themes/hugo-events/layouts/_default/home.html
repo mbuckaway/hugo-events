@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+<head>
+    {{ partial "header" . }}
+</head>
+<body>
+     {{ partial "nav" . }}
+     {{ partial "preload" . }}
+     {{ partial "slider" . }}
+     {{ if eq .Site.Params.Info.enabled true }}
+         {{ partial "info" . }}
+     {{ end }}
+     {{ if eq .Site.Params.RegisterInfo.enabled true }}
+        {{ partial "register" . }}
+     {{ end}}
+     {{ partial "schedule" . }}
+     {{ partial "download" . }}
+     {{ partial "venue" . }}
+     {{ partial "volunteers" . }}
+     {{ partial "sponsors" . }}
+     {{ partial "footer" . }}
+</body>
+</html>

@@ -1,0 +1,79 @@
+{{- $sliders := .Site.Params.Slider }}
+{{- $layers := .Site.Params.Layer }}
+
+        <!-- FULLSCREEN SLIDER -->
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+				<ul>	
+                    {{ range $sliders }}
+                	<!-- SLIDE 1 -->
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="images/jump.jpg"  data-saveperformance="off"  data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/{{.image}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        {{ range $layers }}
+                            {{ if eq .enabled true }}
+                                {{ if eq .type "text" }}
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption light_heavy_70_shadowed lfb ltt tp-resizeme"
+                                    data-x="center" data-hoffset="{{ .hoffset }}"
+                                    data-y="center" data-voffset="{{ .voffset }}"
+                                    data-speed="600"
+                                    data-start="800"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">{{ .text }}
+                                </div>
+                                {{ end }}
+                                {{ if eq .type "image" }}
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption tp-resizeme" 
+                                    data-type="image" 
+                                    data-x="center" data-hoffset="{{ .hoffset }}"
+                                    data-y="center" data-voffset="{{ .voffset }}"
+                                    data-speed="600"
+                                    data-start="900"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    
+                                    <img src="images/{{.image}}" alt="Images Text" height="{{.image_height}}">
+                                </div>
+                                {{ end }}
+                                {{ if eq .type "button" }}
+                                <!-- LAYER NR. 6 -->
+                                <a href="{{ .url }}" target=_blank class="largeyellowbg tp-caption modern_medium_fat_white lfb ltt tp-resizeme" 
+                                    data-type="text" 
+                                    data-x="center" data-hoffset="{{ .hoffset }}"
+                                    data-y="center" data-voffset="{{ .voffset }}"
+                                    data-speed="600"
+                                    data-start="900"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.01"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="500"
+                                    data-endeasing="Power4.easeIn"
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    {{ .text }}
+                                </a>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>		
+                <div class="tp-bannertimer"></div>	
+            </div>
+		</div>

@@ -1,0 +1,135 @@
+		<!-- Mapbox -->
+		<div id='map' style="width:100%; height:400px"></div>
+
+
+        <!-- FOOTER -->        
+        <footer id="footer">
+        	<div class="container">
+            	<div class="row">
+                	
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                    	<h4 class="uppercase">{{.Site.Params.eventname}}</h4>
+                        <p class="small">The KW Cycling Academy presents the first annual The Dirty Nein, bringing MTB racing to the City of Waterloo.</p>
+                        <ul class="list-unstyled list-inline uppercase">
+                            <li><a href="https://www.facebook.com/thedirtynein/"><i class="fa fa-lg fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/thedirtynein"><i class="fa fa-lg fa-twitter"></i></a></li>
+                            <!--<li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>-->
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                    	<h4 class="uppercase">FAQ</h4>
+                        <!--<p class="small">Etiam nec porta risus. Aliquam id odio orci. Duis accumsan feugiat feugiat.</p>-->
+                        
+                        <dl class="faqs">
+                            <dt>Contact Information</dt>
+                            <dd class="small">Email: info at thedirtynein dot ca</a></dd>
+                        	<dt>Parking</dt>
+                        	<dd class="small">Free parking is available on site.</dd>
+                        
+                            
+                        </dl>
+                    </div>
+                    
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <!--<h4 class="uppercase">newsletter</h4>
+                        
+
+                        <div class="row">
+                            <form action="/documents/techguide.pdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+
+                            <div class="col-lg-8"> 
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fb10f94fb2e20950622d63346_81956fc994" tabindex="-1" value=""></div>
+                                <input type="email" name="EMAIL" value="" id="mce-EMAIL">
+                            </div> 
+                            <div class="col-lg-4">     
+                                <button class="button button-big button-line-light" type="submit" value="Subscribe" name="subscribe">subscribe</button>
+                            </div>
+                            </form>
+                        </div>
+
+
+                        <p class="small">Subscribe to keep up to date on The Dirty Nein events and news.</p>-->
+                        
+                    </div>
+                
+                </div>
+            </div>
+        </footer>
+        
+        <!-- SUBFOOTER -->
+        <div class="subfooter">
+        	<div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled list-inline pull-right uppercase">
+                            <!-- 
+			    <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+			    -->
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        
+        
+        <!--<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+        <script src="js/jquery.themepunch.tools.min.js"></script>
+        <script src="js/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/salvattore.js"></script>
+        <script src="js/jquery.countdown.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/retina.js"></script>
+        
+        <script src="js/main.js"></script>
+        
+
+        <!-- Mapbox -->
+		<script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibWJ1Y2thd2F5IiwiYSI6ImNqdWx2ZGwwdjJiOG00ZXA0ZzAzaXplZmoifQ.xrVHJFbzf9Yv3QEoLIMmig';
+			var map = new mapboxgl.Map({
+				container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v10',
+                style: 'mapbox://styles/mbuckaway/cjulvj6ow1eu91fp2ey1dpxjh',
+				center: [-80.4882664,43.4807067],
+				zoom: 13,
+			});
+
+		  	var marker = new mapboxgl.Marker()
+				.setLngLat([-80.4882664, 43.4807067])
+			  	.addTo(map);
+
+			
+
+			var markerHeight = 40, markerRadius = 0, linearOffset = 25;
+			var popupOffsets = {
+				'top': [0, 0],
+				'top-left': [0,0],
+				'top-right': [0,0],
+				'bottom': [0, -markerHeight],
+				'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+				'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+				'left': [markerRadius, (markerHeight - markerRadius) * -1],
+				'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+			};
+
+			var popup = new mapboxgl.Popup({offset: popupOffsets, closeButton: false, closeOnClick: false})
+			  .setLngLat([-80.4882664,43.4807067])
+			  .setHTML("<h5><u>The Dirty Nein Venue</u></h5><address>185 Bridge St W.,<br> Waterloo, ON<br>N2K 1K9</address>")
+			  .addTo(map);
+
+			map.scrollZoom.disable();
+			map.addControl(new mapboxgl.NavigationControl());
+		</script>

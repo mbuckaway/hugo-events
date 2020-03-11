@@ -1,0 +1,54 @@
+{{- $info := .Site.Params.Info }}
+{{- $poweredby := .Site.Params.Poweredby }}
+{{- $item1 := .Site.Params.Item1 }}
+{{- $item2 := .Site.Params.Item2 }}
+{{- $item3 := .Site.Params.Item3 }}
+
+    <!-- INFO -->
+        <section id="info">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-12 text-center">
+                        <h2>{{- $info.hashtag}}</h2>
+                        {{ if eq $poweredby.enabled true}}
+                        Powered by <a href="{{ $poweredby.url }}" target=_blank>
+                            <img  src="images/{{ $poweredby.image }}" alt="{{ $poweredby.alt_text}}">
+                        </a>>
+                        {{end}}
+                        <p class="lead">{{ $info.line1}}</p>
+                        {{ with $info.line2 }}
+                        <p class="lead">{{ $info.line2 }}</p>
+                        {{end}}
+                    </div>
+
+                    
+                    <div class="col-lg-10 col-lg-offset-1 col-md-12 text-center">
+                        <div class="row">
+                            {{ if eq $item1.enabled true}}
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x {{ $item1.icon }}"></i>
+                                <h4>{{ $item1.text }}</h4>
+                                <p>{{ $item1.line }}</p>
+                            </div>
+                            {{end}}
+                            {{ if eq $item2.enabled true}}
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x {{ $item2.icon }}"></i>
+                                <h4>{{ $item2.text }}</h4>
+                                <p>{{ $item2.line }}</p>
+                            </div>
+                            {{end}}
+                            {{ if eq $item2.enabled true}}
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x {{ $item3.icon }}"></i>
+                                <h4>{{ $item3.text }}</h4>
+                                <p>{{ $item3.line }}</p>
+                            </div>
+                            {{end}}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>

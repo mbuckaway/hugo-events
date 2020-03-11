@@ -1,0 +1,44 @@
+[[main]]
+  url = "#info"
+  name = "About"
+  weight = 10
+
+[[main]]
+  url = "#register"
+  name = "Register"
+  weight = 20
+
+[[main]]
+  url = "#schedule"
+  name = "Schedule"
+  weight = 30
+
+[[main]]
+  url = "#download"
+  name = "Tech Guide"
+  weight = 40
+
+[[main]]
+  url = "#venue"
+  name = "Course"
+  weight = 50
+
+[[main]]
+  url = "#volunteers"
+  name = "Volunteers"
+  weight = 60
+
+[[main]]
+  url = "#sponsors"
+  name = "Sponsors"
+  weight = 70
+
+[[main]]
+  url = "#footer"
+  name = "Contact"
+  weight = 80
+
+[[main]]
+  url = "/results/2019"
+  name = "Results"
+  weight = 90

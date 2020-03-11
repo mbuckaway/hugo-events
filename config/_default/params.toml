@@ -1,0 +1,143 @@
+eventname = "The Dirty Nein"
+logo = "thedirtyneinlogo.png"
+author = "Mark Buckaway"
+# Layers for the Sliders
+# Each layer is common to all sliders
+[[Layer]]
+    enabled=true
+    hoffset=0
+    voffset=-70
+    type="text"
+    text="The Dirty Nein MTB Race"
+[[Layer]]
+    enabled=true
+    hoffset=-140
+    voffset=-10
+    type="text"
+    text="August 16, 2020 in Waterloo"
+[[Layer]]
+    enabled=true
+    hoffset=305
+    voffset=120
+    type="image"
+    image="thedirtyneinlogo.png"
+    image_height=200
+[[Layer]]
+    enabled=true
+    hoffset=-100
+    voffset=120
+    type="image"
+    image="kwca_logo_white.png"
+    image_height=100
+[[Layer]]
+    enabled=true
+    hoffset=-150
+    voffset=260
+    type="button"
+    url="https://ccnbikes.com/#!/events/the-dirty-nein-2019"
+    text="Register"
+[[Layer]]
+    enabled=true
+    hoffset=0
+    voffset=260
+    type="button"
+    url="/results/2019/"
+    text="Results"
+
+# Slider Definitions
+# One image per slider with layers on top of the image
+[[Slider]]
+    enabled=true
+    image="jump.jpg"
+
+[[Slider]]
+    enabled=true
+    image="course.jpg"
+
+[[Slider]]
+    enabled=true
+    image="kidswin.jpg"
+
+[[Slider]]
+    enabled=true
+    image="race.jpg"
+
+[[Slider]]
+    enabled=true
+    image="kwcayouth.jpg"
+
+
+# Info Section Definitions
+# Poweredby, item1, item2, and item3 for the info section. The icon is a font awesome icon.
+[Info]
+    enabled=true
+    hashtag="#THEDIRTNIEN"
+    line1="Last year, one of our KW Mountain Bike racer friends invited some of his closest friends to celebrate his 39th birthday by running a short track MTB race around his condo complex. He called it the Dirty Nein. When some 50+ riders showed up, they decided it could not happen again in their back yard. So, we moved the race to Bechtel Park."
+    line2="The KW Cycling Academy presents the first annual Short Track MTB race, bringing MTB racing to the City of Waterloo. The race will be held at Bechtel Park in the South End of Wateroo close to all amenities. All proceeds to support Youth Cycling in Waterloo Region."
+[Poweredby]
+    enabled=false
+    url="https://www.geminimotors.com/"
+    image="gemini_subaru.png"
+    alt_text="Gemini Subaru"
+[Item1]
+    enabled=true
+    icon="pe-7s-bicycle"
+    text="Course Features"
+    line="Using the UCI short track format, the course is a mix of grass, single and double track, hills, log rolls, and jumps. The course length will be 2.0km as per UCI rules."
+[Item2]
+    enabled=true
+    icon="pe-7s-cup"
+    text="Team Tent Area"
+    line="We will have area for team tents right next to the course."
+[Item3]
+    enabled=true
+    icon="pe-7s-map-marker"
+    text="Location"
+    line="Centrally located only one-hour west of Toronto and one-hour east of London, The Dirty Nein will challenge racers with a course across grass, double track, steep descents, jumps, log roles, and tough climbs."
+
+
+# Register Area
+# This is a list of items to display. Should be 2-4 items
+[RegisterInfo]
+    enabled=true
+    title="Register"
+
+[[Register]]
+    enabled=true
+    title="Early Bird"
+    price="$35"
+    description1="Online Registration up to"
+    description2="August. 16, 11:59am"
+    price2="U19 - $25"
+    icon="pe-7s-wristwatch"
+[[Register]]
+    enabled=true
+    title="Standard"
+    price="$45"
+    description1="Online Registration up to"
+    description2="August. 1, 11:59am"
+    price2="U19 - $35"
+    icon="pe-va"
+[[Register]]
+    enabled=true
+    title="Day Of"
+    price="$35"
+    description1="Registration at event"
+#    description2="August. 16, 11:59am"
+    price2="U19 - $25"
+    icon="pe-va"
+[[Register]]
+    enabled=true
+    title="Second Race"
+    price="$10"
+    description1="Fatbike/CX"
+ #   description2=" "
+    price2="U19 - $10"
+    icon="pe-va"
+
+# Schedule Page
+[ScheduleInfo]
+    enabled=true
+    title="SCHEDULE"
+    day="Sunday"
+
